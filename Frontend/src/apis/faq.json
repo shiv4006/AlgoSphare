@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "What is AlgoSphere?",
+    "answer": "AlgoSphere is a platform that provides curated DSA problem sets, structured learning paths, and categorized sheets to help users master data structures and algorithms efficiently."
+  },
+  {
+    "id": 2,
+    "question": "Who can use AlgoSphere?",
+    "answer": "AlgoSphere is designed for beginners, intermediate learners, and advanced coders preparing for interviews, competitive programming, and skill enhancement."
+  },
+  {
+    "id": 3,
+    "question": "How are the problem sheets structured?",
+    "answer": "The problems are categorized into four sheets: Complete DSA, Interview Preparation, Algorithm Patterns, and Competitive Programming, allowing users to focus on specific learning goals."
+  },
+  {
+    "id": 4,
+    "question": "Do I need prior coding experience to start?",
+    "answer": "No, AlgoSphere is beginner-friendly. The sheets start from fundamental concepts and progress to advanced topics, making it accessible to all learners."
+  },
+  {
+    "id": 5,
+    "question": "How can AlgoSphere help with interview preparation?",
+    "answer": "Our Interview Preparation Sheet contains handpicked problems commonly asked in technical interviews, helping users build confidence and problem-solving skills for real-world scenarios."
+  },
+  {
+    "id": 6,
+    "question": "What makes AlgoSphere different from other DSA resources?",
+    "answer": "AlgoSphere offers a structured, roadmap-driven approach, curated problem sets, and a categorized learning experience, making it easier to track progress and stay consistent."
+  },
+  {
+    "id": 7,
+    "question": "Can I use AlgoSphere for competitive programming practice?",
+    "answer": "Yes! Our Competitive Programming Sheet includes Codeforces problems ranging from 800 to 2200 ratings, helping users enhance their problem-solving speed and accuracy."
+  },
+  {
+    "id": 8,
+    "question": "Is AlgoSphere free to use?",
+    "answer": "Yes, AlgoSphere provides free access to structured problem sheets. Future premium features may be introduced for advanced guidance and additional resources."
+  }
+]
