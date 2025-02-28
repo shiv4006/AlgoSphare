@@ -37,7 +37,7 @@ const Home = () => {
          */
       }
 
-      <div className="hero-section w-full my-24 flex gap-8 lg:gap-16 items-center flex-col md:flex-row">
+      <div className="hero-section w-full my-24 lg:mt-32 flex gap-8 lg:gap-16 items-center flex-col md:flex-row">
         <div className="hero-content w-full order-2 md:order-1">
           <h3 className="hero-title text-xl lg:text-3xl font-semibold">Welcome to <span className="text-2xl lg:text-4xl text-[#4E5FB5] font-bold">AlgoSphere</span> - Your DSA Problem-Solving Companion</h3>
           <p className="mt-2 text-sm lg:mt-4 lg:text-base">Unlock your potential in data structures and algorithms with our curated DSA sheets. Explore expertly categorized problem sets, track your progress like a pro, and elevate your coding journey. Whether you're a beginner or a competitive programmer, AlgoSphere has something for everyone.</p>

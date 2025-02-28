@@ -7,7 +7,7 @@ const Footer = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="mt-20 mb-16 px-8 sm:px-16 lg:px-32">
+    <div className="mt-20 mb-4 px-8 sm:px-16 lg:px-32">
       <hr className={`h-[1.5px] rounded-sm border-none ${theme === "dark" ? "bg-gray-400" : "bg-gray-600"}`} />
 
       <div className={`${theme === "dark" ? "text-white" : "text-black"} flex flex-col sm:flex-row justify-between gap-4 md:gap-8 lg:gap-16 xl:gap-48 mt-12 items-center sm:items-start`}>
@@ -15,10 +15,10 @@ const Footer = () => {
           <h1 className="text-2xl font-medium">AlgoSphare</h1>
           <p className={`mt-4 text-sm ${theme === "dark" ? "text-gray-200" : "text-gray-700"} font-regular`}>AlgoSphere simplifies your DSA journey with curated problems and progress tracking to boost your coding skills.</p>
           <div className="mt-4 flex justify-center sm:justify-start gap-4">
-            <span>L</span>
-            <span>Y</span>
-            <span>I</span>
-            <span>F</span>
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-facebook"></i>
           </div>
         </div>
 

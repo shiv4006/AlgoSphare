@@ -2,7 +2,7 @@
 import { useContext, useState } from "react"
 import { ThemeContext } from "../.."
 import ProblemsList from "../../ui/ProblemsList";
-import problems from '../../apis/dummy'
+// import problems from '../../apis/dummy'
 
 const Dsa = () => {
 
@@ -10,10 +10,25 @@ const Dsa = () => {
 
   const { theme } = useContext(ThemeContext);
 
+  const [data, setData] = useState([]);
+
   // Object.entries(problems.problems).map((curr) => {
   //   console.log(curr);
   // })
 
+  useState(() => {
+
+    fetch("problems.json")
+      .then(res => res.json())
+      .then(data => setData(data));
+  })
+
+  // data.map(item => {
+  //   console.log(item);
+  // })
+  // console.log(data);
+  
+  
   return (
     <div className={`w-full mt-28 px-4 sm:px-16 lg:px-32 `}>
       <div>
@@ -40,8 +55,12 @@ const Dsa = () => {
 
       <ul className={`mt-16`}>
         {
-          Object.entries(problems.problems).map(problemSet => {
-            return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
+          // Object.entries(problems.problems).map(problemSet => {
+          //   return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
+          // })
+
+          data.map((item) => {
+            return <ProblemsList key={item.data_structure} id={item.data_structure} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={item} />
           })
         }
       </ul>

@@ -10,6 +10,10 @@ const List = ({ id, difficultyOpen, setDifficultyOpen, curr }) => {
   const difficulty = curr[0][0].toUpperCase() + curr[0].slice(1);
   const list = curr[1];
 
+  // list.map((item) => {
+  //   console.log(item);
+  // })
+
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -32,14 +36,17 @@ const List = ({ id, difficultyOpen, setDifficultyOpen, curr }) => {
               <tr className="border-b border-gray-700">
                 <th className="text-center py-3">STATUS</th>
                 <th className="text-center py-3">PROBLEM</th>
-                <th className="text-center py-3">PRACTICE</th>
-                <th className="text-center py-3">NOTES</th>
-                <th className="text-center py-3">REVISION</th>
+                <th className="text-center py-3 px">PRACTICE</th>
+                <th className="text-center py-3 px-1">NOTES</th>
+                <th className="text-center py-3 px-">REVISION</th>
               </tr>
             </thead>
             <tbody>
               {
-                Object.entries(list).map((question, index) => {
+                // Object.entries(list).map((question, index) => {
+                //   return <Problem key={index} question={question} />
+                // })
+                list.map((question, index) => {
                   return <Problem key={index} question={question} />
                 })
               }

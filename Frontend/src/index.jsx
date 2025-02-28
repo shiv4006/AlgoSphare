@@ -52,7 +52,7 @@ export const DifficultyProvider = ({ children }) => {
     updateWidth();
 
     const observer = new MutationObserver(updateWidth);
-    observer.observe(easyValueRef.current, { childList: true, characterData: true });
+    // observer.observe(easyValueRef.current, { childList: true, characterData: true });
 
     return () => observer.disconnect(); // Cleanup observer when component unmounts
   }, [])

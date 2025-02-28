@@ -7,8 +7,10 @@ const ProblemsList = ({ id, topicOpen, setTopicOpen, problemSet }) => {
 
   const [difficultyOpen, setDifficultyOpen] = useState(-1);
 
-  const topic = problemSet[0];
-  const problems = problemSet[1];
+  const topic = problemSet.data_structure[0].toUpperCase() + problemSet.data_structure.slice(1);
+  const problems = problemSet.problems;
+
+  // console.log(problems);
 
   const { theme } = useContext(ThemeContext);
 
@@ -28,8 +30,11 @@ const ProblemsList = ({ id, topicOpen, setTopicOpen, problemSet }) => {
         {
           topicOpen === id && <ul className="w-[95%] py-5">
             {
-              Object.entries(problems).map((curr, index) => {
-                return <List key={index} curr={curr} id={index} difficultyOpen={difficultyOpen} setDifficultyOpen={setDifficultyOpen} />
+              // Object.entries(problems).map((curr, index) => {
+              //   return <List key={index} curr={curr} id={index} difficultyOpen={difficultyOpen} setDifficultyOpen={setDifficultyOpen} />
+              // })
+              Object.entries(problems).map((item, index) => {
+                return <List key={index} curr={item} id={index} difficultyOpen={difficultyOpen} setDifficultyOpen={setDifficultyOpen} />
               })
             }
           </ul>
