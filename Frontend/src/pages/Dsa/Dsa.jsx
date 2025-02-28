@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "../.."
 import ProblemsList from "../../ui/ProblemsList";
 // import problems from '../../apis/dummy'
@@ -16,7 +16,7 @@ const Dsa = () => {
   //   console.log(curr);
   // })
 
-  useState(() => {
+  useEffect(() => {
 
     fetch("problems.json")
       .then(res => res.json())

@@ -11,7 +11,7 @@ const Problem = ({ question }) => {
 
   const title = question.title;
   // const description = question.description;
-  // const link = question.link;
+  const link = question.link;
 
   console.log(question);
 
@@ -31,7 +31,7 @@ const Problem = ({ question }) => {
       </td>
       <Link><td className="py-3">{title}</td></Link>
       <td className="py-3 px-1">
-        <i className="fa-solid fa-arrow-up-right-from-square cursor-pointer text-center w-full"></i>
+        <a href={link}><i className="fa-solid fa-arrow-up-right-from-square cursor-pointer text-center w-full"></i></a>
       </td>
       <td className="py-3 px-1">
         <FaEdit className="text-gray-400 cursor-pointer text-center w-full" />

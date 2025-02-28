@@ -1,13 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../.."
 import ProblemsList from "../../ui/ProblemsList";
-import problems from '../../apis/dummy'
+// import problems from '../../apis/dummy'
 
 const Algorithm = () => {
   const [topicOpen, setTopicOpen] = useState("");
 
   const { theme } = useContext(ThemeContext);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+
+    fetch("problems.json")
+      .then(res => res.json())
+      .then(data => setData(data));
+  })
 
   // Object.entries(problems.problems).map((curr) => {
   //   console.log(curr);
@@ -35,8 +44,12 @@ const Algorithm = () => {
 
       <ul className={`mt-16`}>
         {
-          Object.entries(problems.problems).map(problemSet => {
-            return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
+          // Object.entries(problems.problems).map(problemSet => {
+          //   return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
+          // })
+
+          data.map((item) => {
+            return <ProblemsList key={item.data_structure} id={item.data_structure} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={item} />
           })
         }
       </ul>
