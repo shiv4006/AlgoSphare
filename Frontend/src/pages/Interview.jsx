@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useEffect, useState } from "react"
-import { ThemeContext } from "../.."
-import ProblemsList from "../../ui/ProblemsList";
+import { ThemeContext } from ".."
+import ProblemsList from "../ui/ProblemsList";
 // import problems from '../../apis/dummy'
 
-const Algorithm = () => {
+const Interview = () => {
   const [topicOpen, setTopicOpen] = useState("");
 
   const { theme } = useContext(ThemeContext);
@@ -58,4 +58,4 @@ const Algorithm = () => {
   )
 }
 
-export default Algorithm
+export default Interview

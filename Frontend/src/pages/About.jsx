@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { useContext } from "react"
-import { ThemeContext } from "../.."
+import { ThemeContext } from ".."
 
 const About = () => {
 

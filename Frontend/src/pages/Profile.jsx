@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { DifficultyContext, ThemeContext } from "../.."
+import { DifficultyContext, ThemeContext } from ".."
 
 const Profile = () => {
 

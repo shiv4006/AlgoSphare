@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useEffect, useState } from "react"
-import { ThemeContext } from "../.."
-import ProblemsList from "../../ui/ProblemsList";
+import { ThemeContext } from ".."
+import ProblemsList from "../ui/ProblemsList";
 // import problems from '../../apis/dummy'
 
-const Cp = () => {
+const Algorithm = () => {
   const [topicOpen, setTopicOpen] = useState("");
 
   const { theme } = useContext(ThemeContext);
@@ -47,6 +47,7 @@ const Cp = () => {
           // Object.entries(problems.problems).map(problemSet => {
           //   return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
           // })
+
           data.map((item) => {
             return <ProblemsList key={item.data_structure} id={item.data_structure} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={item} />
           })
@@ -57,4 +58,4 @@ const Cp = () => {
   )
 }
 
-export default Cp
+export default Algorithm

@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import heroImg from '../../assets/hero.jpg'
-import completeImg from '../../assets/complete.jpg'
-import interviewImg from '../../assets/interview.jpg'
-import algorithmImg from '../../assets/algorithm.jpg'
-import cpImg from '../../assets/cp.jpg'
+import heroImg from '../assets/hero.jpg'
+import completeImg from '../assets/complete.jpg'
+import interviewImg from '../assets/interview.jpg'
+import algorithmImg from '../assets/algorithm.jpg'
+import cpImg from '../assets/cp.jpg'
 import { Link } from 'react-router-dom'
-import faq from '../../apis/faq.json'
-import Faq from '../../ui/Faq'
+import faq from '../apis/faq.json'
+import Faq from '../ui/Faq'
 import { useContext, useState } from 'react'
-import { ThemeContext } from '../..'
+import { ThemeContext } from '..'
 import { Tilt } from 'react-tilt'
 
 const Home = () => {

@@ -1,20 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext, useState, useEffect } from "react"
-import { ThemeContext } from "../.."
-import ProblemsList from "../../ui/ProblemsList";
+import { useContext, useEffect, useState } from "react"
+import { ThemeContext } from ".."
+import ProblemsList from "../ui/ProblemsList";
 // import problems from '../../apis/dummy'
 
-const Dsa = () => {
-
+const Cp = () => {
   const [topicOpen, setTopicOpen] = useState("");
 
   const { theme } = useContext(ThemeContext);
 
   const [data, setData] = useState([]);
-
-  // Object.entries(problems.problems).map((curr) => {
-  //   console.log(curr);
-  // })
 
   useEffect(() => {
 
@@ -23,19 +18,13 @@ const Dsa = () => {
       .then(data => setData(data));
   })
 
-  // data.map(item => {
-  //   console.log(item);
+  // Object.entries(problems.problems).map((curr) => {
+  //   console.log(curr);
   // })
-  // console.log(data);
-  
-  
-  return (
-    <div className={`w-full mt-28 px-4 sm:px-16 lg:px-32 `}>
-      <div>
-        <button>Back</button>
-      </div>
 
-      <div className={`mt-12 w-full md:w-[80%]`}>
+  return (
+    <div className={`mt-28 px-4 sm:px-16 lg:px-32 w-full`}>
+      <div className={`w-full md:w-[80%]`}>
         <h1 className={`text-2xl md:text-3xl font-semibold ${theme === "dark" ? "text-white" : "text-black"}`}>Complete DSA Sheet</h1>
         <p className={`mt-4 text-sm md:text-base font-medium ${theme === "dark" ? "text-gray-200" : "text-gray-700"}`}>The AlgoSphare Complete Sheet is a free, structured course that takes you through Data Structures and Algorithms from A to Z. With high-quality content designed for easy learning, you'll build a solid foundation in DSA. Join our growing community of learners and get the support you need to succeed!</p>
       </div>
@@ -58,7 +47,6 @@ const Dsa = () => {
           // Object.entries(problems.problems).map(problemSet => {
           //   return <ProblemsList key={problemSet[0]} id={problemSet[0]} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={problemSet} />
           // })
-
           data.map((item) => {
             return <ProblemsList key={item.data_structure} id={item.data_structure} topicOpen={topicOpen} setTopicOpen={setTopicOpen} problemSet={item} />
           })
@@ -69,4 +57,4 @@ const Dsa = () => {
   )
 }
 
-export default Dsa
+export default Cp

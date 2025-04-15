@@ -1,7 +1,7 @@
-import sunImg from '../../assets/sun.svg'
+import sunImg from '../assets/sun.svg'
 import { Link } from 'react-router-dom'
 import { useContext, useState } from 'react'
-import { ThemeContext } from '../..'
+import { ThemeContext } from '..'
 
 const Navbar = () => {
 

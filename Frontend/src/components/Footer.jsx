@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ThemeContext } from "../.."
+import { ThemeContext } from ".."
 import { Link } from "react-router-dom";
 
 const Footer = () => {
